@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Paris",
+        "lon": 2.3488,
+        "lat": 48.8534
+    },
+    {
+        "name": "London",
+        "lon": 18.0649,
+        "lat": 59.3326
+    },
+    {
+        "name": "venice, it",
+        "lon": 12.3267,
+        "lat": 45.4386
+    },
+    {
+        "name": "Berlin",
+        "lon": 13.4105,
+        "lat": 52.5244
+    },
+    {
+        "name": "Stockholm",
+        "lon": -0.1257,
+        "lat": 51.5085
+    }
+]
