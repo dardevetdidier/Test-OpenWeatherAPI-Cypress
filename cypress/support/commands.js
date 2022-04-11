@@ -20,3 +20,16 @@ Cypress.Commands.add("RequestByLonLat", (latitude, longitude) => {
         }
     })
 })
+
+Cypress.Commands.add("RequestById", (id) => {
+    cy.request({
+        url: "https://api.openweathermap.org/data/2.5/weather",
+        qs: {
+            id: id,
+            units: "metric",
+            appid: Cypress.env('API_KEY')
+        }
+    })
+})
+
+
