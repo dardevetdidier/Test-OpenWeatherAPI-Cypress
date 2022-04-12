@@ -1,15 +1,9 @@
 /// <reference types="Cypress" />
 
+import { formatCityName } from "../helpers/formatCityName"
+
 describe("Open Weather API - By city Name suite tests", () => {
     let cities = require("../fixtures/citiesData");
-
-    function formatCityName(index) {
-        if (cities[index].name.includes(",")) {
-            return cities[index].name.split(", ")[0];
-        } else {
-            return cities[index].name;
-        }
-    }
 
     it("Should return Code 200 with valid city name", () => {
         for (let i = 0; i < cities.length; i++) {
@@ -22,7 +16,7 @@ describe("Open Weather API - By city Name suite tests", () => {
     it("Should return the right city name", () => {
         for (let i = 0; i < cities.length; i++) {
             cy.RequestByCityName(cities[i].name).then((response) => {
-                expect(response.body.name).to.eql(formatCityName(i));
+                expect(response.body.name).to.eql(formatCityName(cities[i].name));
             });
         }
     });

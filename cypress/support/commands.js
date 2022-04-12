@@ -32,4 +32,3 @@ Cypress.Commands.add("RequestById", (id) => {
     })
 })
 
-
