@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-12T07:23:39.959Z",
-    "end": "2022-04-12T07:23:41.538Z",
-    "duration": 1579,
+    "start": "2022-04-12T09:11:27.048Z",
+    "end": "2022-04-12T09:11:29.016Z",
+    "duration": 1968,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "085de33b-2d1f-4b09-984c-65a9faa84318",
+      "uuid": "581497f3-ee87-4728-924c-cd7ebe5927a2",
       "title": "",
       "fullFile": "cypress/integration/WeatherByLatitudeLongitude.spec.js",
       "file": "cypress/integration/WeatherByLatitudeLongitude.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "819d3492-0bec-4521-bf50-05078c8fca76",
+          "uuid": "d753db96-7b58-442c-a978-af631ae3130d",
           "title": "Open Weather API - By Latitude Longitude suite tests",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should return Status Code 200",
               "fullTitle": "Open Weather API - By Latitude Longitude suite tests Should return Status Code 200",
               "timedOut": null,
-              "duration": 449,
+              "duration": 771,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "for (let i = 0; i < cities.length; i++) {\n  cy.RequestByLonLat(cities[i].lat, cities[i].lon).then(response => {\n    expect(response.status).to.eq(200);\n  });\n}",
               "err": {},
-              "uuid": "4048a691-ac38-41a6-baaf-c45190542bec",
-              "parentUUID": "819d3492-0bec-4521-bf50-05078c8fca76",
+              "uuid": "9814ecd6-44bc-4d27-9f5f-4ccd5611c84a",
+              "parentUUID": "d753db96-7b58-442c-a978-af631ae3130d",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Should return right coordonates",
               "fullTitle": "Open Weather API - By Latitude Longitude suite tests Should return right coordonates",
               "timedOut": null,
-              "duration": 351,
+              "duration": 416,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "for (let i = 0; i < cities.length; i++) {\n  cy.RequestByLonLat(cities[i].lat, cities[i].lon).then(response => {\n    expect(response.body.coord).to.have.property(\"lon\");\n    expect(response.body.coord).to.have.property(\"lat\");\n  });\n}",
               "err": {},
-              "uuid": "238aeaeb-e67b-41e7-a6df-7083e0003a7b",
-              "parentUUID": "819d3492-0bec-4521-bf50-05078c8fca76",
+              "uuid": "c9b39647-0ddf-4be4-9549-e8dd1e5f591d",
+              "parentUUID": "d753db96-7b58-442c-a978-af631ae3130d",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Should return a valid schema",
               "fullTitle": "Open Weather API - By Latitude Longitude suite tests Should return a valid schema",
               "timedOut": null,
-              "duration": 660,
+              "duration": 664,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "for (let i = 0; i < cities.length; i++) {\n  cy.RequestByLonLat(cities[i].lat, cities[i].lon).then(response => {\n    expect(response.body).have.property(\"coord\").to.be.an(\"object\");\n    expect(response.body).have.property(\"weather\").to.be.an(\"array\");\n    expect(response.body).have.property(\"wind\").to.be.an(\"object\");\n    expect(response.body).have.property(\"clouds\").to.be.an(\"object\");\n    expect(response.body).have.property(\"name\").to.be.a(\"string\");\n    expect(response.body.coord).have.property(\"lon\").to.be.a(\"number\");\n    expect(response.body.coord).have.property(\"lat\").to.be.a(\"number\");\n  });\n}",
               "err": {},
-              "uuid": "5cb129a3-ae7e-4b0e-9dc1-12abe800ff15",
-              "parentUUID": "819d3492-0bec-4521-bf50-05078c8fca76",
+              "uuid": "b97bc319-5087-4fd8-9641-4c7dad4f7b83",
+              "parentUUID": "d753db96-7b58-442c-a978-af631ae3130d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4048a691-ac38-41a6-baaf-c45190542bec",
-            "238aeaeb-e67b-41e7-a6df-7083e0003a7b",
-            "5cb129a3-ae7e-4b0e-9dc1-12abe800ff15"
+            "9814ecd6-44bc-4d27-9f5f-4ccd5611c84a",
+            "c9b39647-0ddf-4be4-9549-e8dd1e5f591d",
+            "b97bc319-5087-4fd8-9641-4c7dad4f7b83"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1460,
+          "duration": 1851,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
